@@ -37,11 +37,30 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   // create a new category
+  // try {
+  //   const categoryData = await Category.create(req.body);
+  //   res.status(200).json(categoryData);
+  // } catch (err) {
+  //   res.status(400).json(err);
+  // }
+
   try {
     const categoryData = await Category.create(req.body);
+
+    console.log(req.body.productIds.length);
+    if (req.body.productIds.length) {
+      const categoryProductArr = req.body.productIds.map((product_id) => {
+        return {
+          category_id: categoryData.id,
+          product_id,
+        };
+      });
+      return Product.create(categoryProductArr);
+    }
+
     res.status(200).json(categoryData);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
