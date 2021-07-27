@@ -24,48 +24,48 @@
 - [**Author**](#-author)
 
 ## 📑 Description
-![Image Caption](images/main_menu.PNG)
-
 As a manager at an internet retail company, don't you want a back end for your e-commerce website that uses the latest technologies so that your company can compete with other e-commerce companies? 
 
 If your answer is **"YES"**, feel free to grab my application to handle the backend for your website! 
 
-It's time to use **Employee Tracker** to fulfill your needs!  
+Visit the [**Deployed Link**](https://ecommerce-sjp.herokuapp.com/) and explore the routes!
 
-There are several things you need to complete before you run the app, so please look at this documentation carefully!
+**NOTES** You can test the routes for adding and updating **ONLY** through **Insomnia**. Otherwise, you can test the routes through the link above.
 
 ## ❗ Features
-Followings are the features you can experience in the app.
+Followings are the routes you can test through the app.
 
-1. **View** Options
-    - View All Employees
-    - View Employees by Manager
-    - View Employees by Role
-    - View Employees by Department
-    - View All Roles
-    - View All Departments
-    - View the Total Utilized Budget of a Department
-2. **Add** Options
-    - Add Employee
-    - Add Role
-    - Add Department
-3. **Update** Options
-    - Update Employee Roles
-    - Update Employee Manager
-4. **Remove** Options
-    - Remove Employee
-    - Remove Role
-    - Remove Department
+1. **Products Routes**: `/api/products` + 
+    - **GET All Products**: `/`
+    - **Get a Product**: `/:id` 
+    - **Add a New Product**: `/`
+    - **Update a Product**: `/:id` 
+    - **Delete a Product**: `/:id`  
+    **Notes**: `/:id` is the number you pick from the list of the Products.
+
+2. **Categories Routes**: `/api/categories` +
+    - **GET All Categoryies**: `/`
+    - **Get a Category**: `/:id` 
+    - **Add a New Category**: `/`
+    - **Update a Category**: `/:id` 
+    - **Delete a Category**: `/:id`  
+    **Notes**: `/:id` is the number you pick from the list of the Categories.
+
+3. **Tags Routes**
+    - **GET All Tags**: `/`
+    - **Get a Tag**: `/:id` 
+    - **Add a New Tag**: `/`
+    - **Update a Tag**: `/:id` 
+    - **Delete a Tag**: `/:id`  
+    **Notes**: `/:id` is the number you pick from the list of the Tags.
 
 ## 💾 Installation
 You would need to have the following **`npm`** packages for this app.
 - **`mysql`**
-- **`inquirer`**
-- **`figlet`**
-- **`validator`**
+- **`mysql2`**
+- **`express`**
+- **`sequelize`**
 - **`dotenv`**
-- **`console.table`**
-- **`chalk`** 
 
 You already have all the packages in your **`package.json`**?  
 Then just type **`npm i`** in your terminal.
@@ -73,21 +73,20 @@ Then just type **`npm i`** in your terminal.
 ## 💻 Usage
 Once you **`git clone`** this repository, make sure you create **`.env`** file in your cloned directory, and have following codes in your **`.env`**.
 ```
-DB_HOST=localhost
 DB_NAME=
-DB_PASS=
 DB_USER=
-DB_PORT=3306
+DB_PW
 ```
 **Notes** 
 - **`DB_NAME`**: the name of the database in **`./db/schema.sql`** 
 - **`DB_USER`**: the root user of your **`MySQL`** Database.
-- **`DB_PASS`**: the password of your **`MySQL`** Account.
+- **`DB_PW`**: the password of your **`MySQL`** Account.
 
-Then **Copy & Paste** everything from **`schema.sql`** and **`seeds.sql`** in **`db`** folder to your **MySQL Workbench** and run the scripts to have all the tables and some seeded data.
+Then seed the sample data by running the following command in your terminal.
+- **`npm run seed`**
 
 Finished all the steps above?  
-Type and run following command in your terminal.
+Type and run the following command in your terminal.
 - **`npm start`** 
 
 ## 🛠 License
@@ -99,20 +98,16 @@ If you want to watch the demo video for how to use the application, check out th
 **CLICK THE PLAY BUTTON**  
 [![Image Caption](images/youtube-play-button.PNG)](https://youtu.be/DtImnxCd0y0)
 
-
-## ❔ Questions
-🖐 If you have any question about me or my project, feel free to contact me!  
-- **Github**: [**zzangu0215**](https://github.com/zzangu0215)  
-- **Email**: **tajo0215@gmail.com**
-
 ## 🔥 Contributing
 **Israel Magallon**
   - Portfolio: [**Portfolio**](https://imagallon.github.io/portfolio1.1/) (to be updated)
   - Email: **izzymagallonworks@gmail.com**
-  - Github: [**GitHub**](https://github.com/imagallon)
+  - **Github**: [**imagallon**](https://github.com/imagallon)
 
 ## 😎 Author
+🖐 If you have any question about me or my project, feel free to contact me!  
 - **Jun Park**
     - Portfolio: [**Portfolio**](https://zzangu0215.github.io/portfolio/) (to be updated)
     - Email: **tajo0215@gmail.com**
-    - SNS: [**Instagram**](https://www.instagram.com/o0ojunny/)
+    - **Github**: [**zzangu0215**](https://github.com/zzangu0215)
+    - [**Instagram**](https://www.instagram.com/o0ojunny/)
