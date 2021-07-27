@@ -84,7 +84,7 @@ Once you **`git clone`** this repository, make sure you create **`.env`** file i
 ```
 DB_NAME=
 DB_USER=
-DB_PW
+DB_PW=
 ```
 
 **Notes**
