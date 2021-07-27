@@ -20,7 +20,6 @@
 - [**Usage**](#-usage)
 - [**License**](#-license)
 - [**Demo Video**](#-demo-video)
-- [**Questions**](#-questions)
 - [**Contributing**](#-contributing)
 - [**Author**](#-author)
 
